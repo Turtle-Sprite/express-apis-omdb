@@ -1,2 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+<h1><%= film.Title %></h1>
 <% // Render individual movie details here %>
 <% // This is how to do comments in EJS, by the way... %>
+<p>year: <%= film.Year %></p>
+<p>rated: <%= film.Rated %> </p>
+<p>runtime: <%= film.Runtime %></p>
+
+<% if (film.Poster !== "N/A") {%>
+    <img alt="<%= film.Title %>" src="<%= film.Poster %>" >
+    <% } else { %>
+        <p>No poster available</p>
+    <% } %>
+<h2>Directed By: <%= film.Director %></h2>
+<h3>Starring: <%= film.Actors %></h3>
+
+<%- include('partials/footer.ejs')%>

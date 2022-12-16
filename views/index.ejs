@@ -1,2 +1,12 @@
+
+<%- include('partials/header.ejs') %>
+
 <h1>OMDB Movie Search</h1>
-<p>Search for a movie below...</p>
+<br>
+<form method="GET" action="/results">
+    <label for="results">Search your movie title</label>
+    <input type="text" id="results" name="results" placeholder="Enter movie title"> 
+    <input type="submit">
+  </form>
+
+  <%- include('partials/footer.ejs')%>
